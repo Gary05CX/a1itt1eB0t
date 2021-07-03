@@ -46,5 +46,17 @@ async def sampic(ctx):
     random_pic = random.choice(jdata['sam'])
     pic = discord.File(random_pic)
     await ctx.send(file= pic)
+
+@bot.command()
+async def patpic(ctx):
+    random_pic = random.choice(jdata['patgay'])
+    pic = discord.File(random_pic)
+    await ctx.send(file= pic)
     
+@bot.command()
+async def gary(ctx):
+    await ctx.send("[2021-07-04-->1015:go out;(maybe)1500:back home and free];\
+        [2021-07-05-->0800:go out;(maybe)1500:back home and free];\
+            [2021-07-06-->0800:go out;(maybe)1500:back home and free]")
+
 bot.run(jdata['TOKEN'])
