@@ -1,5 +1,9 @@
 import discord
 from discord.ext import commands
+import json
+
+with open('setting.json','r',encoding='utf8') as jfile:
+        jdata = json.load(jfile)
 
 intents = discord.Intents.all()
 
@@ -32,4 +36,4 @@ async def ping(ctx):
 async def patgay(ctx):
     await ctx.send("(@patfat#4559) is GAY")
 
-bot.run('ODYwNTU0NTY0NTA3OTI2NTg4.YN875A.6ibKkKNESjNNl9cy-EA3nUo1t6A')
+bot.run(jdata['TOKEN'])
