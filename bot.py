@@ -7,18 +7,18 @@ bot = commands.Bot(command_prefix='?',intents=intents)
 
 @bot.event
 async def on_ready():
-    print(">> a1itt1ebot is fucking online!!! <<")
+    print(">> a1itt1ebot is online!!! <<")
 
 @bot.event
 async def on_member_join(member):
     print(f"{member} join!")
-    channel = bot.get_channel(710844919954276422)
+    channel = bot.get_channel(860843545387859979)
     await channel.send(f"{member} join!")
 
 @bot.event
 async def on_member_remove(member):
     print(f"{member} leave!")
-    channel = bot.get_channel(710844919954276422)
+    channel = bot.get_channel(860843545387859979)
     await channel.send(f"{member} leave!")
 
 bot.run('ODYwNTU0NTY0NTA3OTI2NTg4.YN875A.6ibKkKNESjNNl9cy-EA3nUo1t6A')
