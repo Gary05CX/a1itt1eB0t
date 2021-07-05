@@ -13,9 +13,9 @@ bot = commands.Bot(command_prefix='?',intents=intents)
 
 @bot.event
 async def on_ready():
-    print(">> a1itt1ebot is online!!! <<")
+    print("on_ready")
     channel = bot.get_channel(int(jdata['A1itt1eB0t']))
-    await channel.send("a1itt1eB0t is online!!")
+    await channel.send("a1itt1eB0t just wake up!!!")
 
 @bot.event
 async def on_member_join(member):
