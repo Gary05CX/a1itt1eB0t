@@ -10,6 +10,10 @@ class Cmd(Cog_Extension):
     @commands.command()
     async def morningstar(self, ctx):
         await ctx.send("<@!628223595772116993> is Gay")
+    
+    @commands.command()
+    async def shitsam(self, ctx):
+        await ctx.send("<@!628223595772116993> eat shit la!!!")
 
 def setup(bot):
     bot.add_cog(Cmd(bot))
