@@ -10,6 +10,8 @@ class wrong(Cog_Extension):
             await ctx.send("MissingRequiredArgument!!")
         elif isinstance(error, commands.errors.CommandNotFound):
              await ctx.send("Commands not found  沒這指令!!")
+        alse:
+            await ctx.send("wrong")
 
 def setup(bot):
     bot.add_cog(wrong(bot))
