@@ -5,8 +5,8 @@ import json
 import random
 from discord.ext.commands import Bot
 
-with open('setting.json','r',encoding='utf8') as jfile:
-        jdata = json.load(jfile)
+with open('C:\\Discord Bot\\Project_1\\a1itt1eB0t\\setting.json','r',encoding='utf8') as jfile:
+    jdata = json.load(jfile)
 
 intents = discord.Intents.all()
 
@@ -18,11 +18,11 @@ async def on_ready():
     channel = bot.get_channel(int(jdata['A1itt1eB0t']))
     await channel.send("a1itt1eB0t just wake up!!!")
 
-for filename in os.listdir('./cmds'):
+for filename in os.listdir('C:\\Discord Bot\\Project_1\\a1itt1eB0t\\cmds'):
     if filename.endswith('.py'):
         bot.load_extension(f'cmds.{filename[:-3]}')
 
-for filename in os.listdir('./onmsg'):
+for filename in os.listdir('C:\\Discord Bot\\Project_1\\a1itt1eB0t\\onmsg'):
     if filename.endswith('.py'):
         bot.load_extension(f'onmsg.{filename[:-3]}')
 

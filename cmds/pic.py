@@ -4,7 +4,7 @@ from core.classes import Cog_Extension
 import random 
 import json
 
-with open('setting.json','r',encoding='utf8') as jfile:
+with open('C:\\Discord Bot\\Project_1\\a1itt1eB0t\\setting.json','r',encoding='utf8') as jfile:
         jdata = json.load(jfile)
 
 class Pic(Cog_Extension):
