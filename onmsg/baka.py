@@ -6,7 +6,9 @@ class Onmsg1(Cog_Extension):
     
     @commands.Cog.listener()
     async def on_message(self, msg):
-        if msg.content == 'ばか' and msg.author.id == 626419302232227841 or msg.author.id == 723473163341791314 :
+        if msg.content == 'ばか' and msg.author.id == 626419302232227841 :
+            await msg.channel.send('は？')
+        elif msg.content == 'ばか' and msg.author.id == 723473163341791314 :
             await msg.channel.send('は？')
 
 def setup(bot):

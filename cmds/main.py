@@ -10,7 +10,14 @@ class Main(Cog_Extension):
 
     @commands.command()
     async def gary(self, ctx):
-        await ctx.send("2021-07-13>>>>>free at 1600\n2021-07-14>>>>>free at 1600\n2021-07-15>>>>>free at 1945")
+        await ctx.send("""""DATE           TIME(Free at)
+        2021-07-19          1900
+        2021-07-20          1600
+        2021-07-21          1400
+        2021-07-22          1600
+        2021-07-23          1400
+        XXXX-XX-XX          XXXX
+        """)
         print("sameone ask gary")
 
 def setup(bot):
