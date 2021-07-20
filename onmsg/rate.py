@@ -8,8 +8,8 @@ class rate(Cog_Extension):
     @commands.Cog.listener()
     async def on_message(self, msg):
         RATE = ("rate","機率")
-        a = randrange(100)
-        b = randrange(100)
+        a = randrange(101) 
+        b = randrange(101)
         c = a+b
         list = [a, b, c]
         if msg.content.endswith(RATE) :
