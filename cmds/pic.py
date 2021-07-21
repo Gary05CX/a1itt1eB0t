@@ -20,5 +20,10 @@ class Pic(Cog_Extension):
         pic = discord.File(random_pic)
         await ctx.send(file= pic)
 
+    @commands.command()
+    async def chung(self, ctx):
+        pic = discord.File('C:\\Discord Bot\\Project_1\\a1itt1eB0t\\masterchung\\IMG-20210417-WA0027.jpg')
+        await ctx.send(file= pic)
+
 def setup(bot):
     bot.add_cog(Pic(bot))

@@ -1,6 +1,10 @@
 import discord
 from discord.ext import commands
 from core.classes import Cog_Extension
+import json
+
+with open('C:\\Discord Bot\\Project_1\\a1itt1eB0t\\setting.json','r',encoding='utf8') as jfile:
+    jdata = json.load(jfile)
 
 class react(Cog_Extension):
 
