@@ -23,6 +23,7 @@ class Pic(Cog_Extension):
     @commands.command()
     async def chung(self, ctx):
         pic = discord.File('C:\\Discord Bot\\Project_1\\a1itt1eB0t\\masterchung\\IMG-20210417-WA0027.jpg')
+        await ctx.send("<@!576372439940988929>")
         await ctx.send(file= pic)
 
 def setup(bot):
