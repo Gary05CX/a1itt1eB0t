@@ -12,7 +12,7 @@ class rate(Cog_Extension):
         b = randrange(100) + 1
         c = a+b
         list = [a, b, c]
-        if msg.content.endswith(RATE) :
+        if msg.contentR in RATE :
             possive = ["<@!626419302232227841>", "<@!723473163341791314>"]
             negative = ["gay", "ばか", "白痴", "on9", "6uo"]
             if msg.content in negative:
