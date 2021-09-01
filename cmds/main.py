@@ -11,11 +11,11 @@ class Main(Cog_Extension):
     @commands.command()
     async def gary(self, ctx):
         await ctx.send("""DATE           TIME(Free at)
-        2021-07-25          1500
-        2021-07-26          1900
-        2021-07-27          1600
-        2021-07-28          1600
-        2021-07-29          1900
+        2021-08-04          1800
+        2021-08-05          1600
+        2021-08-06          0000
+        2021-08-07          0000
+        2021-08-08          0000
         XXXX-XX-XX          XXXX
         """)
         print("sameone asked gary")
