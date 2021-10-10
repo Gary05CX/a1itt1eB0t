@@ -10,11 +10,11 @@ class jason(Cog_Extension):
     
     @commands.Cog.listener()
     async def on_message(self, msg):
-        jasongay = ["方世熙"]
+        jasongay = ["張宬碩"]
         itchannel = [889535320301924384, 890148548119781396, 894357272141123594, 94358636405604352, 894359609010188288, 894360315356123186, 894361285024686130]
         if msg.content in jasongay :
             if msg.channel.id in itchannel: 
-                await msg.channel.send('<@!805096973929414663>')
+                await msg.channel.send('<@!497380617810608143>')
             
 def setup(bot):
     bot.add_cog(jason(bot))

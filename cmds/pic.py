@@ -5,7 +5,7 @@ import random
 import json
 
 with open('C:\\Discord Bot\\Project_1\\a1itt1eB0t\\setting.json','r',encoding='utf8') as jfile:
-        jdata = json.load(jfile)
+    jdata = json.load(jfile)
 
 class Pic(Cog_Extension):
     @commands.command()
@@ -17,6 +17,12 @@ class Pic(Cog_Extension):
     @commands.command()
     async def patpic(self, ctx):
         random_pic = random.choice(jdata['patgay'])
+        pic = discord.File(random_pic)
+        await ctx.send(file= pic)
+
+    @commands.command()
+    async def jasonpic(self, ctx):
+        random_pic = random.choice(jdata['jason'])
         pic = discord.File(random_pic)
         await ctx.send(file= pic)
 
