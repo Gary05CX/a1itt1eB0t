@@ -1,20 +1,49 @@
 import discord
 from discord.ext import commands
+from discord.ext.commands.core import command
 from core.classes import Cog_Extension
+import time as t
 
 class Main(Cog_Extension):
 
     @commands.command()
     async def ping(self, ctx):
+        id = str(ctx.author.id)
+        local = t.localtime()
+        time = t.strftime("%Y %m %d %H:%M:%S", local)
+        cmd = str("ping")
         await ctx.send(f'{round(self.bot.latency*1000)} ms')
+        with open("C:\Discord Bot\Project_1\\a1itt1eB0t\\note.txt", mode="a", encoding="utf-8") as file:
+            file.write("\n")
+            file.write("\n")
+            file.write(time)
+            file.write("\n")
+            file.write(id)
+            file.write("\n")
+            file.write(cmd)
 
     @commands.command()
     async def gary(self, ctx):
+        id = str(ctx.author.id)
+        local = t.localtime()
+        time = t.strftime("%Y %m %d %H:%M:%S", local)
+        cmd = str("gary")
         await ctx.send("1600(Mon,Tue,Wed,Fri);1600-1700&2000(Thu);1900(Sat);1500(Sun)")
-        print("sameone asked gary")
+        with open("C:\Discord Bot\Project_1\\a1itt1eB0t\\note.txt", mode="a", encoding="utf-8") as file:
+            file.write("\n")
+            file.write("\n")
+            file.write(time)
+            file.write("\n")
+            file.write(id)
+            file.write("\n")
+            file.write(cmd)
 
     @commands.command()
     async def garypc(self, ctx):
+        id = str(ctx.author.id)
+        local = t.localtime()
+        time = t.strftime("%Y %m %d %H:%M:%S", local)
+        cmd = str("garypc")
         await ctx.send("""Motherboard: ASRock B550 Steel Legend ATX
 CPU: AMD Ryzen 7 3700X 
 GPU: GEFORCE GTX 1660 SUPER VENTUS XS OC
@@ -27,8 +56,47 @@ Keyboard: Logitech G512
 Mic: HyperX QuadCast S
 Headphone: Razer Kraken + Razer USB Audio Controller
 Monitor: ZOWIE XL2411P 144Hz""")
-        print("sameone asked gary's PC")
+        with open("C:\Discord Bot\Project_1\\a1itt1eB0t\\note.txt", mode="a", encoding="utf-8") as file:
+            file.write("\n")
+            file.write("\n")
+            file.write(time)
+            file.write("\n")
+            file.write(id)
+            file.write("\n")
+            file.write(cmd)
 
+    @commands.command()
+    async def say(self, ctx, *, msg):
+        id = str(ctx.author.id)
+        local = t.localtime()
+        time = t.strftime("%Y %m %d %H:%M:%S", local)
+        cmd = str("say")
+        await ctx.message.delete()
+        await ctx.send(msg)
+        with open("C:\Discord Bot\Project_1\\a1itt1eB0t\\note.txt", mode="a", encoding="utf-8") as file:
+            file.write("\n")
+            file.write("\n")
+            file.write(time)
+            file.write("\n")
+            file.write(id)
+            file.write("\n")
+            file.write(cmd)
+
+    @commands.command()
+    async def time(self, ctx):
+        id = str(ctx.author.id)
+        cmd = str("time")
+        local = t.localtime()
+        time = t.strftime("%Y %m %d %H:%M:%S", local)
+        await ctx.send(time)
+        with open("C:\Discord Bot\Project_1\\a1itt1eB0t\\note.txt", mode="a", encoding="utf-8") as file:
+            file.write("\n")
+            file.write("\n")
+            file.write(time)
+            file.write("\n")
+            file.write(id)
+            file.write("\n")
+            file.write(cmd)
 
 def setup(bot):
     bot.add_cog(Main(bot))
