@@ -81,5 +81,6 @@ class Pic(Cog_Extension):
             file.write("\n")
             file.write(cmd)
 
+
 def setup(bot):
     bot.add_cog(Pic(bot))

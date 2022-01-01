@@ -52,6 +52,21 @@ class Cmd(Cog_Extension):
             file.write("\n")
             file.write(cmd)
     
+    @commands.command()
+    async def me(self, ctx):
+        id = str(ctx.author.id)
+        local = t.localtime()
+        time = t.strftime("%Y %m %d %H:%M:%S", local)
+        cmd = str("me")
+        await ctx.send("<@!"+id+">")
+        with open("C:\Discord Bot\Project_1\\a1itt1eB0t\\note.txt", mode="a", encoding="utf-8") as file:
+            file.write("\n")
+            file.write("\n")
+            file.write(time)
+            file.write("\n")
+            file.write(id)
+            file.write("\n")
+            file.write(cmd)
 
 def setup(bot):
     bot.add_cog(Cmd(bot))

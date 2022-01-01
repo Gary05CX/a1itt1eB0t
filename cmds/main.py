@@ -28,7 +28,7 @@ class Main(Cog_Extension):
         local = t.localtime()
         time = t.strftime("%Y %m %d %H:%M:%S", local)
         cmd = str("gary")
-        await ctx.send("1600(Mon,Tue,Wed,Fri);1600-1700&2000(Thu);1900(Sat);1500(Sun)")
+        await ctx.send("....")
         with open("C:\Discord Bot\Project_1\\a1itt1eB0t\\note.txt", mode="a", encoding="utf-8") as file:
             file.write("\n")
             file.write("\n")
