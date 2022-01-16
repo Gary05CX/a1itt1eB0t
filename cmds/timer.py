@@ -47,6 +47,16 @@ class timer(Cog_Extension):
             n += 1 
             channel = self.bot.get_channel(926342317567250452)
             await channel.send("<@!"+id+">"+ "time up!!!"+"("+str(n)+"/"+str(round)+")")
+            await channel.send("```"+"\n"+time+"```")
+            with open("C:\Discord Bot\Project_1\\a1itt1eB0t\\note.txt", mode="a", encoding="utf-8") as file:
+                file.write("\n")
+                file.write("\n")
+                file.write(time)
+                file.write("\n")
+                file.write(id)
+                file.write("\n")
+                file.write("warframetimer")
+                file.write("("+str(n)+"/"+str(round)+")")
         
     @commands.command()
     async def timerhelp(self, ctx):
